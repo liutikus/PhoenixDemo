@@ -6,8 +6,8 @@ import About from './pages/About';
 const App = () => {
   return (
    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/:lng" element={<Home />} />
+      <Route path="/:lng/about" element={<About />} />
     </Routes>
   )
 }
