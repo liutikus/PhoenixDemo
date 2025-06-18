@@ -44,7 +44,7 @@ const OurValues = () => {
   
 
   return (
-    <section className=" px-[60px]">
+    <section className=" px-[60px] pb-[4em]">
       <div className="relative top-0 left-0 w-full">
         <img src={BgValuesImg} alt="Valorile Noastre" className="object-cover"/>
       <div className="absolute rounded-2xl inset-0 bg-gradient-to-t from-[var(--color-theme)] to-transparent" />
