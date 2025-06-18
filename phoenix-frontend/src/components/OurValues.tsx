@@ -44,7 +44,7 @@ const OurValues = () => {
   
 
   return (
-    <section className="px-[60px]">
+    <section className=" px-[60px]">
       <div className="relative top-0 left-0 w-full">
         <img src={BgValuesImg} alt="Valorile Noastre" className="object-cover"/>
       <div className="absolute rounded-2xl inset-0 bg-gradient-to-t from-[var(--color-theme)] to-transparent" />
@@ -54,7 +54,7 @@ const OurValues = () => {
       </div>
 
       </div>
-       <div className="grid gap-4 grid-cols-2 pt-[2em]">
+       <div className="pt-[2em] grid grid-cols-2 gap-6 items-stretch">
     {values.map(({textKey, title, icon} : Value, index)=>(
         <div key={index}> 
         <ValueCard textKey = {textKey} title = {title} icon = {icon}/>
