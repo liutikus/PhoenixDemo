@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import HeroCards from "../components/HeroCards";
 import OurValues from "../components/OurValues";
 import TeamSection from "../components/TeamSection";
+import CompanyStats from "../components/CompanyStats";
 
 
 
@@ -25,6 +26,7 @@ const Home = () => {
     <HeroCards/>
     <OurValues/>
     <TeamSection/>
+    <CompanyStats/>
     </div>
   )
 }
