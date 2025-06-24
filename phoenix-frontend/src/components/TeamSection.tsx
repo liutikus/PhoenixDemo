@@ -22,7 +22,6 @@ const TeamSection = () => {
             .catch(console.error)
 
     },[])
-    console.log(ambasadors, teamMembers)
   return (
     <section className="py-[4em] px-[60px]">
        <div className=" h-full p-[60px] py-[96px] bg-white rounded-2xl shadow-md relative top-0 left-0 w-ful flex flex-col justify-center items-center text-center">

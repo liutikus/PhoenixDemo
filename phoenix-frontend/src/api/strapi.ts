@@ -12,4 +12,39 @@ export const fetchAmbasadors = async () => {
   return data.data;
 };
 
-console.log(BaseURL)
+export const fetchSponsors = async () => {
+  const res = await fetch(`${BaseURL}/api/sponsors?populate=*`);
+  const data = await res.json();
+  return data.data;
+};
+
+export const fetchProjects = async () => {
+  const res = await fetch(`${BaseURL}/api/projects?populate=*`);
+  const data = await res.json();
+  return data.data;
+};
+
+export const fetchProjectById = async (documentId: string | undefined) => {
+  const res = await fetch(`${BaseURL}/api/projects/${documentId}?populate=*`);
+  const data = await res.json();
+  return data.data;
+};
+
+export const fetchNews = async () => {
+  const res = await fetch(`${BaseURL}/api/news?populate[team_member][populate]=Image`);
+  const data = await res.json();
+  return data.data;
+};
+
+export const fetchNewsById = async (documentId: string | undefined) => {
+  const res = await fetch(`${BaseURL}/api/news/${documentId}?populate=*`);
+  const data = await res.json();
+  return data.data;
+};
+
+
+
+
+
+
+

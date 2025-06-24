@@ -7,6 +7,9 @@ import HeroCards from "../components/HeroCards";
 import OurValues from "../components/OurValues";
 import TeamSection from "../components/TeamSection";
 import CompanyStats from "../components/CompanyStats";
+import Testimonials from "../components/Testimonials";
+import Sponsors from "../components/Sponsors";
+import Footer from "../components/Footer";
 
 
 
@@ -19,6 +22,7 @@ const Home = () => {
       i18n.changeLanguage(lng);
     }
   }, [lng]);
+  
   return (
     <div>
       <NavBar/>
@@ -27,6 +31,9 @@ const Home = () => {
     <OurValues/>
     <TeamSection/>
     <CompanyStats/>
+    <Testimonials/>
+    <Sponsors/>
+    <Footer/>
     </div>
   )
 }
