@@ -5,6 +5,9 @@ import Projects from './pages/Projects';
 import LanguageGuard from './components/LanguageGuard';
 import ProjectDetails from './pages/ProjectDetails';
 import News from './pages/News';
+import NewsDetails from './pages/NewsDetails';
+import Donation from './pages/Donation';
+import Contact from './pages/Contact';
 
 const App = () => {
   return (
@@ -15,6 +18,13 @@ const App = () => {
         <Route path="projects/:projectStatus" element={<Projects />} />
         <Route path="projects/:projectStatus/:id" element={<ProjectDetails />} />
         <Route path="news" element={<News />} />
+        <Route path="news/:id" element={<NewsDetails />} />
+        <Route path="donation" element={<Donation />} />
+        <Route path="contact" element={<Contact />} />
+
+      
+
+
 
 
       </Route>

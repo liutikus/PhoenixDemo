@@ -9,7 +9,7 @@ type ProjectGalleryProps = {
 
 const ProjectGallery = ({images} : ProjectGalleryProps) => {
   return (
-    <section className="px-[60px] pb-[4em]">
+    <section >
         <div className="grid grid-cols-3 gap-x-4 space-y-6">
         {images?.map(({url}, index)=>(
             <div key={index}>

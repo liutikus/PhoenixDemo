@@ -30,7 +30,10 @@ const ProjectDetails = () => {
       <ProjectDetailsHero imgURL = {projectDetails?.bannerImage.url} />
       <ProjectInfo isActive = {projectDetails?.active} title = {projectDetails?.title} results={projectDetails?.results} projectPurpose = {projectDetails?.projectPurpose} />
         <ProjectStats partners={projectDetails?.partners} location={projectDetails?.location} finishDate={projectDetails?.finishDate} startDate={projectDetails?.startDate}/>
+        <div className="px-[60px] pb-[4em]">
+
         <ProjectGallery images = {projectDetails?.images}/>
+        </div>
 
       <SponsorsInfiniteScroll/>
       <Footer/>

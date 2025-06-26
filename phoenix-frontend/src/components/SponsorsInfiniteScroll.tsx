@@ -5,7 +5,7 @@ import { BaseURL, fetchSponsors } from "../api/strapi";
 
 const SponsorsInfiniteScroll = () => {
 
-    const {t} = useTranslation();
+  
         const [sponsors, setSponsors] = useState<Sponsor[] | null>(null);
     
         useEffect(()=>{
@@ -15,7 +15,7 @@ const SponsorsInfiniteScroll = () => {
         },[]);
   return (
   <section>
-  <div className="overflow-hidden w-full bg-white py-4">
+  <div className="overflow-hidden w-full bg-transparent py-4">
     <div className="relative w-full">
       {/* Inline animation style */}
       <style>
