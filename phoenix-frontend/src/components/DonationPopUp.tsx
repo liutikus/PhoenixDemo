@@ -110,7 +110,23 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                 className="fixed inset-0 bg-[var(--color-theme)] opacity-50"
                 onClick={() => handleClose()}
             />
-            <div className="z-50 bg-white p-[60px] rounded-2xl">
+            <div className="z-50 m-[16px] bg-white  rounded-2xl">
+                   <div className="relative cursor-pointer">
+ 
+  <div 
+                onClick={() => handleClose()}
+
+  className="absolute top-6 right-4 ">
+    <div className="w-6 h-0.5 bg-[var(--color-theme)] rounded-full rotate-45" />
+    <div className="w-6 h-0.5 bg-[var(--color-theme)] rounded-full -rotate-45 -mt-0.5" />
+  </div>
+  
+ 
+</div>
+                <div className="p-[16px] md:p-[60px]">
+
+                
+         
                 <div className="grid grid-cols-1">
                     <form onSubmit={handleSubmit} className="grid grid-cols-1 w-full max-w-lg text-[var(--color-text)]">
                         <div>
@@ -127,7 +143,7 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                                 required
                             />
                         </div>
-                        <div className="mt-8">
+                        <div className="md:mt-8 mt-3">
                             <label className="block mb-2  font-bold" htmlFor="email">Email<span className="text-[red]">*</span></label>
                             <input
                                 type="text"
@@ -141,7 +157,7 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                                 required
                             />
                         </div>
-                        <div className="mt-8">
+                        <div className="md:mt-8 mt-3">
                             <label className="block mb-2  font-bold" htmlFor="phoneNumber">{t("phoneNumber")} <span className="text-[red]">*</span></label>
                             <input
                                 type="text"
@@ -154,7 +170,7 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                                 required
                             />
                         </div>
-                        <div className="grid grid-cols-2 gap-4 mt-8">
+                        <div className="grid grid-cols-2 gap-4 md:mt-8 mt-3">
                             <div>
                                 <label className="block mb-2  font-bold" htmlFor="country">{t("country")} <span className="text-[red]">*</span></label>
                                 <input
@@ -211,9 +227,9 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                             </label>
                         </div>
                         <div className="pt-[2em]">
-                            <div className="flex justify-between text-3xl font-bold text-[var(--color-text)]">
+                            <div className="w-full flex justify-between text-2xl md:text-3xl font-bold text-[var(--color-text)]">
                                 <h2>{t("sum")}</h2>
-                                <p className="w-min flex">
+                                <div className="w-min flex">
                                  <input
                                 type="number"
                                 min={0}
@@ -221,11 +237,11 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                                 name="amount"
                                 value={formData.amount}
                                 onChange={handleChange}
-                                className="w-auto text-right bg-transparent outline-none"
+                                className="w-[100px] text-right bg-transparent outline-none"
                                 required
                             />
-                                    MDL
-                                </p>
+                                    <span>MDL</span>
+                                </div>
                                
                             </div>
                             <div className="bg-[var(--color-accent)] my-[1.5em] p-[1px]"></div>
@@ -234,9 +250,9 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                                     <button 
                                     type="submit"
                                     data-method={method}
-                                    className="flex cursor-pointer hover:bg-[var(--color-accent-hover)]  text-xl font-bold bg-[var(--color-accent)] px-[1.5em] py-4 rounded-md justify-between w-full items-center text-[var(--color-text)]">
+                                    className="flex cursor-pointer hover:bg-[var(--color-accent-hover)] text-lg md:text-xl font-bold bg-[var(--color-accent)] px-[1.5em] py-4 rounded-md justify-between w-full items-center text-[var(--color-text)]">
                                         <p>{text}</p>
-                                        <p className="text-4xl">{icon}</p>
+                                        <p className="text-2xl md:text-4xl">{icon}</p>
                                     </button>
                                 </div>
                             ))}
@@ -247,7 +263,7 @@ const DonationPopUp = ({ handleClose, amount }: DonationPopUpProps) => {
                     </form>
                 </div>
             </div>
-
+            </div>
         </section>
     )
 }

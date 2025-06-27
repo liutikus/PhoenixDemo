@@ -2,7 +2,7 @@ import { BaseURL } from "../api/strapi"
 
 const GalleryCard = ({img} : {img:string}) => {
   return (
-    <div className=" h-[350px] w-full overflow-hidden bg-white rounded-2xl shadow-md relative top-0 left-0 group mb-[1em]">
+    <div className=" h-[250px] md:h-[350px] w-full overflow-hidden bg-white rounded-2xl shadow-md relative top-0 left-0 group mb-[1em]">
     
                 <div
                     className="absolute bg-top inset-0 bg-cover z-0 rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-110"

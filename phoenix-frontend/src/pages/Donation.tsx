@@ -17,32 +17,32 @@ const Donation = () => {
     <div className="bg-[var(--color-bg)]">
       <NavBar/>
       <HeroAbout pageName= {t("donation")} bgImg={BgHeroDonation}/>
-      <div className="pt-[4em]">
+      <div className="md:pt-[4em]">
         <InfoCard>
          <ChooseDonation/>
         </InfoCard>
       </div>
        <InfoCard>
             <div>
-                <div className="flex justify-between items-center text-[var(--color-text)]">
+                <div className="md:flex justify-between items-center text-[var(--color-text)]">
                     <div>
                         
                 <h2 className="text-2xl font-bold text-[var(--color-theme)]">{t("bankTransferDonation")}</h2>
-                <p className="py-4">{t("phoenixAO")}</p>
+                <p className="py-2 md:py-4">{t("phoenixAO")}</p>
     <ul>
-                        <li className="py-2"><span className="font-bold ">IDNO:</span> 1014620007050 </li>
-                        <li className="py-2"><span className="font-bold ">IBAN:</span> MD76EX0000002251678911MD </li>
-                        <li className="py-2"><span className="font-bold ">BIC:</span> EXMMMD22422 </li>
-                        <li className="py-2"><span className="font-bold ">B.C.</span> EXIMBANK S.A. suc. nr. 9 Chișinău  </li>
+                        <li className="py-1 md:py-2"><span className="font-bold ">IDNO:</span> 1014620007050 </li>
+                        <li className="py-1 md:py-2"><span className="font-bold ">IBAN:</span> MD76EX0000002251678911MD </li>
+                        <li className="py-1 md:py-2"><span className="font-bold ">BIC:</span> EXMMMD22422 </li>
+                        <li className="py-1 md:py-2"><span className="font-bold ">B.C.</span> EXIMBANK S.A. suc. nr. 9 Chișinău  </li>
 
                     </ul>
                     </div>
                 
-                    <div className="w-[30%]">
-                        <h3 className="font-bold pb-4">{t("legalAddress")}</h3>
+                    <div className="md:w-[30%]">
+                        <h3 className="font-bold md:pb-4">{t("legalAddress")}</h3>
                         <p>{t("adressPhoenix")}</p>
                     </div>
-                    <div>
+                    <div className="pt-4 md:pt-0">
                         <DonationBtn isNavigate={false} amount="0"/>
                     </div>
                 </div>

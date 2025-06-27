@@ -30,7 +30,7 @@ const ProjectDetails = () => {
       <ProjectDetailsHero imgURL = {projectDetails?.bannerImage.url} />
       <ProjectInfo isActive = {projectDetails?.active} title = {projectDetails?.title} results={projectDetails?.results} projectPurpose = {projectDetails?.projectPurpose} />
         <ProjectStats partners={projectDetails?.partners} location={projectDetails?.location} finishDate={projectDetails?.finishDate} startDate={projectDetails?.startDate}/>
-        <div className="px-[60px] pb-[4em]">
+        <div className="md:px-[60px] md:pb-[4em] p-[16px]">
 
         <ProjectGallery images = {projectDetails?.images}/>
         </div>

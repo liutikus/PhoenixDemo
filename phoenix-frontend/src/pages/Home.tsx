@@ -27,7 +27,6 @@ const Home = () => {
     <div>
       <NavBar/>
     <HeroSection/>
-    <HeroCards/>
     <OurValues/>
     <TeamSection/>
     <CompanyStats/>

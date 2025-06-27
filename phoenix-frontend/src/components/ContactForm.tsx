@@ -31,23 +31,23 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="px-[60px] py-[5em]">
-      <div className="flex justify-between items-center text-[var(--color-text)]">
-        <div className="w-[50%] pr-4">
+    <section className="md:px-[60px] md:py-[5em] p-[16px]">
+      <div className="md:flex justify-between items-center text-[var(--color-text)]">
+        <div className="md:w-[50%] md:pr-4">
           <h2 className="text-4xl font-bold text-[var(--color-theme)]">{t("contactTitle")}</h2>
           <Trans
             i18nKey={"contactText"}
-            components={[<p className="py-4 text-[var(--color-text)]" />]}
+            components={[<p className="md:py-4 py-1 text-[var(--color-text)]" />]}
           />
-          <div>
+          <div className="pb-5 md:pb-0">
             <h3 className="text-lg font-bold ">{t("socialMedia")}</h3>
-            <div className="pt-4 flex items-center">
+            <div className="md:pt-4 pt-1 lg:flex items-center">
              <div className="flex items-center pr-4">
                 <a href="#" className="bg-[var(--color-theme)] p-[6px] rounded-full">
                     <FacebookIcon className=" text-white"/></a>
                     <p className="font-semibold px-2">Facebook</p>
             </div>
-             <div className="flex items-center pr-4">
+             <div className="flex items-center lg:py-0 py-2 pr-4">
                 <a href="#" className="bg-[var(--color-theme)] p-[6px] rounded-full">
                     <InstagramIcon className=" text-white"/></a>
                     <p className="font-semibold px-2">Instagram</p>
@@ -65,7 +65,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <div className="z-50 bg-white shadow-md p-[60px] rounded-2xl">
+          <div className="z-50 bg-white shadow-md p-[16px] md:p-[60px] rounded-2xl">
             <form onSubmit={handleSubmit} className="grid grid-cols-1 w-full max-w-lg text-[var(--color-text)]">
               <div>
                 <label className="block mb-2 font-bold" htmlFor="name">
@@ -83,7 +83,7 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div className="pt-[1.5em]">
+              <div className="md:pt-[1.5em] pt-4">
                 <label className="block mb-2 font-bold" htmlFor="email">
                   Email <span className="text-red-500">*</span>
                 </label>
@@ -99,7 +99,7 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div className="pt-[1.5em]">
+              <div className="md:pt-[1.5em] pt-4">
                 <label className="block mb-2 font-bold" htmlFor="message">
                   {t("messageTitle")}<span className="text-red-500">*</span>
                 </label>

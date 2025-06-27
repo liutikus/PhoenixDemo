@@ -11,13 +11,13 @@ const AboutStats = () => {
 
   return (
     <section>
-       <div className=" h-full p-[60px] py-[96px] bg-white relative top-0 left-0 w-ful flex flex-col justify-center items-center text-center">
+       <div className=" h-full p-[16px] md:p-[60px] md:py-[96px] bg-white relative top-0 left-0 w-ful flex flex-col justify-center items-center text-center">
                     <div className="pb-[20px] z-10 ">
                         <h2 className="w-fit text-[var(--color-theme)] font-bold text-4xl ">{t("aboutStatsTitle")}</h2>   
                     </div>
-                        <p className="z-10 w-[70%] text-[var(--color-text)]">{t("aboutStatsSubTitle")}</p>
+                        <p className="z-10 md:w-[70%] text-[var(--color-text)]">{t("aboutStatsSubTitle")}</p>
                   <div className="z-0 absolute inset-0 bg-gradient-to-b from-[var(--color-theme)] from-[-11100%] to-transparent to-2220%" />
-            <div className="grid w-full grid-cols-4 gap-4 pt-[3em]">
+            <div className="grid w-full sm:grid-cols-2 md:grid-cols-4 gap-4 pt-[3em]">
                
                     <div className=" flex justify-center flex-col items-center">
                         <img className="h-[75px] w-[75px]" src={ProjectIcon} alt="Projects" />

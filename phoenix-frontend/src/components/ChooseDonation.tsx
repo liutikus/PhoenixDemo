@@ -33,7 +33,7 @@ const ChooseDonation = () => {
       </h2>
       <p className="py-4 text-[var(--color-text)]">{t("chooseDonationText")}</p>
       <div>
-        <div className="flex justify-between gap-2 flex-wrap">
+        <div className="md:flex justify-between gap-2 flex-wrap">
           {donationAmount.map(({ amount, isSelected, id }) => (
             <button
               key={id}
@@ -41,7 +41,7 @@ const ChooseDonation = () => {
                 isSelected
                   ? "text-white bg-[var(--color-theme-hover)] border-[var(--color-theme-hover)]"
                   : "border-[var(--color-accent)] text-[var(--color-text)]"
-              } border py-4 px-8 rounded-md cursor-pointer`}
+              } border py-2 px-4 m-1 md:m-0 md:py-4 md:px-8 rounded-md cursor-pointer`}
               onClick={() => handleAmountClick(amount, id)}
             >
               {amount} MDL
@@ -51,7 +51,7 @@ const ChooseDonation = () => {
             type="number"
             min={0}
             placeholder={t("otherSum")}
-            className="py-4 px-3 text-center rounded-md border border-[var(--color-accent)] text-[var(--color-text)]"
+            className="py-2 md:py-4 md:px-3 m-1 md:m-0 text-center rounded-md border border-[var(--color-accent)] text-[var(--color-text)]"
             onChange={(e) => {
               setAmount(e.target.value);
               setDonationAmount((prev) =>
@@ -63,7 +63,10 @@ const ChooseDonation = () => {
             }}
             value={amount && !donationAmount.some(d => d.amount === amount) ? amount : ""}
           />
+          <div className="mt-4 md:mt-0">
+
           <DonationBtn isNavigate={false} amount = {amount} />
+          </div>
         </div>
         <p className="pt-4">
           {t("chooseDonationTitle")}

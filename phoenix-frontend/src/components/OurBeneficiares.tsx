@@ -35,18 +35,18 @@ const OurBeneficiares = () => {
     },]
 
   return (
-    <section className="px-[60px]">
-       <div className="relative top-0 left-0 w-full">
-        <img src={BgBeneficiaresImg} alt="Valorile Noastre" className="object-cover"/>
-      <div className="absolute rounded-2xl inset-0 bg-gradient-to-t from-[var(--color-theme)] to-transparent" />
+    <section className="md:px-[60px] px-[16px] mt-8 md:mt-0">
+        <div className="relative top-0 left-0 w-full ">
+        <img src={BgBeneficiaresImg} alt="Valorile Noastre" className="object-cover rounded-xl md:h-auto h-[150px]"/>
+      <div className="absolute rounded-xl inset-0 bg-gradient-to-t from-[var(--color-theme)] to-transparent" />
       
-      <div className="absolute z-80 flex bottom-0 py-[60px] px-[100px] flex-col items-start  text-white ">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4leading-[1.5]">{t("ourBeneficiaries")}</h1>
+      <div className="absolute z-80 bottom-0 pb-[20px] md:py-[60px] w-full  text-center md:text-start md:px-[100px] text-white ">
+        <h1 className="text-4xl md:text-5xl  font-bold mb-4leading-[1.5]">{t("ourBeneficiaries")}</h1>
       </div>
 
       </div>
 
-      <div className="py-[1.5em]">
+      <div className="py-8 md:py-[1.5em]">
         {beneficiaries.map(({title,text,img}, index)=>(
             <div key={index}>
                 

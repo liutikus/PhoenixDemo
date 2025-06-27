@@ -19,8 +19,8 @@ const ProjectsSection = ({projects} : ProjectsSectionProps) => {
     const pageProjects = projects?.slice(indexOfFirstPost, indexOfLastPost);
 
     return (
-    <section className="px-[60px] py-[4em]">
-        <div className="grid grid-cols-2 w-full gap-5">
+    <section className="p-[16px] md:px-[60px] md:py-[4em]">
+        <div className="grid md:grid-cols-2 w-full gap-5">
             {pageProjects?.map(({title,active, bannerImage, documentId }, index)=>(
                 <div key={index}>
                     <ProjectCard title={title} active={active} bannerImage={bannerImage} id={documentId}/>

@@ -12,7 +12,7 @@ const ValueCard = ({textKey, title, icon} : Value ) => {
   
 
   return (
-    <div className=" h-full p-[60px] pt-[30px] bg-white rounded-2xl shadow-md relative top-0 left-0 w-ful">
+    <div className=" h-full p-[30px] md:p-[60px] pt-[30px] bg-white rounded-2xl shadow-md relative top-0 left-0 w-ful">
         <div className="pb-[20px] flex z-10 justify-between items-end">
             <h2 className="w-fit text-[var(--color-theme)] font-bold text-2xl ">{title}</h2>
             <img className='' src={icon} alt="Value Icon" />

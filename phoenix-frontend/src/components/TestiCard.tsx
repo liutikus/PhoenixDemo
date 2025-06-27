@@ -2,7 +2,7 @@ import {type Testimonial } from "../types/types"
 
 const TestiCard = ({name, job, text, profileImg} : Testimonial) => {
   return (
-  <div className=" h-full p-[60px] pt-[30px] bg-white rounded-2xl relative top-0 left-0 w-ful">
+  <div className=" h-full p-[16px] md:p-[60px] pt-[30px] bg-white rounded-2xl relative top-0 left-0 w-ful">
           <div className="pb-[30px] flex z-10">
               <img className='h-auto w-auto max-h-[100px] object-contain pr-[12px]' src={profileImg} alt="Value Icon" />
               <div>

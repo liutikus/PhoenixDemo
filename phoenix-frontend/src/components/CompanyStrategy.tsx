@@ -6,14 +6,14 @@ const CompanyStrategy = () => {
 
   return (
     <section>
-       <div className=" h-full p-[60px] py-[96px] bg-white relative top-0 left-0 w-ful flex flex-col justify-center items-center text-center">
-                    <div className="pb-[20px] z-10 ">
+       <div className=" h-full p-[16px] md:p-[60px] md:py-[96px] bg-white relative top-0 left-0 w-ful flex flex-col justify-center items-center text-center">
+                    <div className="pb-2 md:pb-[20px] z-10 ">
                         <h2 className="w-fit text-[var(--color-theme)] font-bold text-4xl ">{t("strategyTitle")}</h2>   
                     </div>
-                        <p className="z-10 w-[70%] text-[var(--color-text)]">{t("strategySubTitle")}</p>
+                        <p className="z-10 md:w-[70%] text-[var(--color-text)]">{t("strategySubTitle")}</p>
                   <div className="z-0 absolute inset-0 bg-gradient-to-b from-[var(--color-theme)] from-[-11100%] to-transparent to-2220%" />
-            <div className="grid w-full grid-cols-3 gap-4 pt-[3em]">
-                     <div className="bg-white z-50 p-[60px] rounded-2xl" >
+            <div className="grid w-full  lg:grid-cols-3 gap-4 pt-4 md:pt-[3em]">
+                     <div className="bg-white z-50 p-[16px] md:p-[60px] rounded-2xl" >
                         <div className="flex justify-between text-start">
                         <h3 className="text-xl text-[var(--color-theme)] font-bold w-min">{t("strategyCardTitle1")}</h3>
                         <h2 className="text-5xl font-bold text-[var(--color-accent)]">1</h2>
@@ -27,7 +27,7 @@ const CompanyStrategy = () => {
                                   /></p>
                         </div>
                     </div>
-                     <div className="bg-white z-50 p-[60px] rounded-2xl" >
+                     <div className="bg-white z-50 p-[16px] md:p-[60px] rounded-2xl" >
                         <div className="flex justify-between text-start">
                         <h3 className="text-xl text-[var(--color-theme)] font-bold">{t("strategyCardTitle2")}</h3>
                         <h2 className="text-5xl font-bold text-[var(--color-accent)]">2</h2>
@@ -41,7 +41,7 @@ const CompanyStrategy = () => {
                                   /></p>
                         </div>
                     </div>
-                     <div className="bg-white z-50 p-[60px] rounded-2xl" >
+                     <div className="bg-white z-50 p-[16px] md:p-[60px] rounded-2xl" >
                         <div className="flex justify-between text-start">
                         <h3 className="text-xl text-[var(--color-theme)] font-bold w-min">{t("strategyCardTitle3")}</h3>
                         <h2 className="text-5xl font-bold text-[var(--color-accent)]">3</h2>

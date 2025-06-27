@@ -52,7 +52,7 @@ const CheckProjectsStatus = () => {
         .then(setProjects)
         .then(()=>CheckProjectsStatus())
         .catch(console.error)
-    },[])
+    },[projectStatus])
 
   return (
     <div>

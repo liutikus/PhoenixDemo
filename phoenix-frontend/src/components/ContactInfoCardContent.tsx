@@ -10,7 +10,7 @@ const ContactInfoCardContent = () => {
     const {t} = useTranslation();
 
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid md:grid-cols-3">
       <div className="flex flex-col items-center">
         <div className="border-1 p-2 border-[var(--color-theme)] w-min rounded-full ">
         <LocationIcon className="text-[var(--color-accent)] w-[24px] h-[24px]"/>

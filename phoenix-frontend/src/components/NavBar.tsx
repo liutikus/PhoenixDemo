@@ -4,9 +4,15 @@ import InstagramIcon from "../assets/icons/Instagram.svg?react";
 import Logo from "../assets/icons/logo-white.svg?react"
 import DonationBtn from "./buttons/DonationBtn";
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
+import FlagRoIcon from "../assets/icons/flag-ro.svg?react"
+import FlagEnIcon from "../assets/icons/flag-en.svg?react"
+import i18n from "../i18n";
 import ArrowIcon from "../assets/icons/nav-arrow.svg?react"
+import MobileMenu from "./MobileMenu";
+
+
 
 
 
@@ -16,7 +22,10 @@ const NavBar = () => {
    const {lng} = useParams();
    const location = useLocation();
    const currentPath = location.pathname
-   const [isMouseOver, setIsMouseOver] = useState(false)
+    const [isMouseOver, setIsMouseOver] = useState(false)
+   
+
+   
 
    const navItems = [{
     name: t("home"),
@@ -35,16 +44,26 @@ const NavBar = () => {
     path: `/${lng}/contact`
    },]
 
+ const navigate = useNavigate();
+
+const handleLanguageChange = () => {
+  const newLang = lng === "ro" ? "en" : "ro";
+  i18n.changeLanguage(newLang);
+
+  const newPath = location.pathname.replace(`/${lng}`, `/${newLang}`);
+  navigate(newPath);
+};
+
 
   return (
-    <nav className="px-[60px] pt-[30px] flex justify-between absolute top-0 left-0 w-full z-30">
-      <div className=" flex justify-between">
+    <nav>
+      <div  className="px-[60px] pt-[30px] hidden md:flex justify-between absolute top-0 left-0 w-full z-30">
+
+      
+      
+       <div className="flex justify-between">
         <div>
-          <img
-            className="h-[64px] w-[183px]"
-            src="/logo/logo-white.png"
-            alt="logo"
-          />
+         <Logo className=" lg:w-[200px] h-[80px] cursor-pointer w-[150px]" />
         </div>
         <div className="flex items-center">
           {navItems.map(({name, path}, index)=>(
@@ -54,7 +73,7 @@ const NavBar = () => {
                  onMouseEnter={()=>setIsMouseOver(true)}
                  onMouseLeave={()=>setIsMouseOver(false)}
                  >
-              <div className={`${currentPath === path ? "text-[var(--color-accent)]" : "text-[white]  cursor-pointer"} font-bold mx-[1.5em] border-b-2 border-transparent transition-all duration-300`}>
+              <div className={`${currentPath === path ? "text-[var(--color-accent)]" : "text-[white]  cursor-pointer"} font-bold mx-2 lg:mx-[1.5em] border-b-2 border-transparent transition-all duration-300`}>
                 <div className="relative flex items-center">{name}
                     <ArrowIcon className={`${isMouseOver ? "origin-center rotate-180": ""} text-transparent h-[10px] w-[10px] mx-1 transform transition-all ease-in-out duration-300`}/>
 
@@ -76,7 +95,7 @@ const NavBar = () => {
             </div>
             ) : (
             <div key={index}>
-                <Link to={path} className={`${currentPath === path ? "text-[var(--color-accent)] cursor-default" : "text-[white]  cursor-pointer hover:border-b-[var(--color-accent)]"} font-bold mx-[1.5em] border-b-2 border-transparent transition-all duration-300`}>
+                <Link to={path} className={`${currentPath === path ? "text-[var(--color-accent)] cursor-default" : "text-[white] te cursor-pointer hover:border-b-[var(--color-accent)]"} font-bold lg:mx-[1em] mx-2 border-b-2 border-transparent transition-all duration-300`}>
             {name}
           </Link>
             </div>
@@ -88,7 +107,7 @@ const NavBar = () => {
         </div>
       </div>
       <div className="flex items-center-safe">
-        <div className="flex items-center">
+        <div className="hidden lg:flex items-center">
           <a href="#">
             <div className="text-white px-[5px] hover:text-[var(--color-accent)] transition-all duration-300">
               <FacebookIcon className="w-[16px] h-[16px]  " />
@@ -106,17 +125,31 @@ const NavBar = () => {
             </div>
           </a>
         </div>
-        <div className="px-[45px] cursor-pointer">
-          <img
-            className="w-[26px] h-[26px]"
-            src="/icons/rom-flag.png"
-            alt="Ro"
-          />
+        <div 
+        onClick={handleLanguageChange}
+        className=" mx-[20px] lg:mx-[40px] cursor-pointer text-transparent">
+         {lng === "ro" ? (<FlagRoIcon className="w-[24px] h-[24px]" />) : (<FlagEnIcon className="w-[24px] h-[24px]" />)}
         </div>
         <div>
           <DonationBtn isNavigate={true} amount=""/>
         </div>
 
+      </div>
+      </div>
+      <div className="md:hidden ">
+        <MobileMenu navItems={navItems}>
+        <div className="flex items-center-safe">
+        <div 
+        onClick={handleLanguageChange}
+        className=" mx-[20px] lg:mx-[40px] cursor-pointer text-transparent">
+         {lng === "ro" ? (<FlagRoIcon className="w-[24px] h-[24px] rounded-full " />) : (<FlagEnIcon className="w-[24px] h-[24px]" />)}
+        </div>
+        <div>
+          <DonationBtn isNavigate={true} amount=""/>
+        </div>
+
+      </div>
+        </MobileMenu>
       </div>
     </nav>
   );

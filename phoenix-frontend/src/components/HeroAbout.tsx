@@ -16,7 +16,7 @@ const HeroAbout = ({pageName, bgImg} : {pageName: string, bgImg:string}) => {
       <div className="relative z-20 flex justify-center items-center h-full text-white ">
         <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4  leading-[1.5]">{pageName}</h1>
-        <div className="uppercase flex justify-center" >
+        <div className="uppercase flex justify-center items-center" >
             <a className="text-[var(--color-accent)]" href="/">{t("home")}</a>
             <img src={ArrowIcon} alt=">" className="h-auto px-[5px] w-auto object-contain "/>
             <h2>{pageName}</h2>

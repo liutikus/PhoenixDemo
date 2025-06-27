@@ -44,17 +44,17 @@ const OurValues = () => {
   
 
   return (
-    <section className=" px-[60px] pb-[4em]">
-      <div className="relative top-0 left-0 w-full">
-        <img src={BgValuesImg} alt="Valorile Noastre" className="object-cover"/>
-      <div className="absolute rounded-2xl inset-0 bg-gradient-to-t from-[var(--color-theme)] to-transparent" />
+    <section className="px-[16px] md:px-[60px] pb-[4em] pt-20">
+      <div className="relative top-0 left-0 w-full ">
+        <img src={BgValuesImg} alt="Valorile Noastre" className="object-cover rounded-xl md:h-auto h-[150px]"/>
+      <div className="absolute rounded-xl inset-0 bg-gradient-to-t from-[var(--color-theme)] to-transparent" />
       
-      <div className="absolute z-80 flex bottom-0 py-[60px] px-[100px] flex-col items-start  text-white ">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4leading-[1.5]">{t("ourValuesTitle")}</h1>
+      <div className="absolute z-80 bottom-0 pb-[20px] md:py-[60px] w-full  text-center md:text-start md:px-[100px] text-white ">
+        <h1 className="text-4xl md:text-5xl  font-bold mb-4leading-[1.5]">{t("ourValuesTitle")}</h1>
       </div>
 
       </div>
-       <div className="pt-[2em] grid grid-cols-2 gap-6 items-stretch">
+       <div className="pt-[2em] grid md:grid-cols-2 gap-6 items-stretch">
     {values.map(({textKey, title, icon} : Value, index)=>(
         <div key={index}> 
         <ValueCard textKey = {textKey} title = {title} icon = {icon}/>

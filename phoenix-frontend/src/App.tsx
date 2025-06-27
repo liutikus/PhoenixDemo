@@ -8,9 +8,12 @@ import News from './pages/News';
 import NewsDetails from './pages/NewsDetails';
 import Donation from './pages/Donation';
 import Contact from './pages/Contact';
+import LanguageSync from './components/LanguageSync';
 
 const App = () => {
   return (
+    <div>
+      <LanguageSync />
     <Routes>
       <Route path="/:lng" element={<LanguageGuard />}>
         <Route index element={<Home />} />
@@ -21,17 +24,12 @@ const App = () => {
         <Route path="news/:id" element={<NewsDetails />} />
         <Route path="donation" element={<Donation />} />
         <Route path="contact" element={<Contact />} />
-
-      
-
-
-
-
       </Route>
 
 
       <Route path="*" element={<p>404 Not Found</p>} />
     </Routes>
+    </div>
   );
 };
 

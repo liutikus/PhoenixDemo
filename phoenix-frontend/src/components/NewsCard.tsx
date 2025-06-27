@@ -24,10 +24,10 @@ const NewsCard = ({title, teamMember,id, publishDate} : NewsCardProps) => {
   }
 
   return (
-    <div className=" bg-white mt-[1.5em] p-[60px] shadow-md rounded-2xl flex flex-col h-full justify-between">
+    <div className=" bg-white mt-4 md:mt-[1.5em] p-[16px] md:p-[60px] shadow-md rounded-2xl flex flex-col h-full justify-between">
         <div className="h-full">
 
-        <h2 className="text-[2em] font-bold text-[var(--color-theme)]">{title}</h2>
+        <h2 className="md:text-[2em] text-2xl font-bold text-[var(--color-theme)]">{title}</h2>
         </div>
         <div className="flex text-[var(--color-text)]  justify-between items-center pt-[1.5em]">
             <div className="flex">

@@ -23,7 +23,7 @@ const DonationBtn = ({isNavigate, amount} :{isNavigate: boolean, amount: string}
     <div>
 
     <button 
-    className="bg-[var(--color-accent)] px-[26px] py-[20px] rounded-md font-semibold cursor-pointer hover:bg-[var(--color-accent-hover)]"
+    className="bg-[var(--color-accent)] lg:px-[26px] p-[12px] md:py-[20px] rounded-md font-semibold cursor-pointer hover:bg-[var(--color-accent-hover)]"
     onClick={()=>{isNavigate ? HandleNavigate() : HandleOpen()}}
     >
       {t("donation")}

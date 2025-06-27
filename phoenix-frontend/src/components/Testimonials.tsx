@@ -56,18 +56,18 @@ const testi = [
   };
 
   return (
-    <section className="py-[60px] px-[60px]">
+    <section className="md:py-[60px] md:px-[60px] px-[16px]">
       <div className="flex flex-col items-center">
         <h1 className="text-5xl text-[var(--color-theme)] font-bold">{t("testiTitle")}</h1>
-        <p className="w-[50%] text-center pt-[1em]">{t("testiSubTitle")}</p>
+        <p className="md:w-[50%] text-center pt-[1em]">{t("testiSubTitle")}</p>
       </div>
 
       <div
         ref={containerRef}
-        className="flex overflow-x-hidden gap-5 scroll-smooth snap-x snap-mandatory pt-[3em] pb-[2em] hide-scrollbar"
+        className="flex md:overflow-x-hidden overflow-x-auto gap-2 md:gap-5 scroll-smooth snap-x snap-mandatory pt-[3em] pb-[2em] hide-scrollbar"
       >
         {testi.map(({ name, job, text, profileImg }, index) => (
-          <div key={index} className="snap-start shrink-0 w-[32%] ">
+          <div key={index} className="snap-start shrink-0 w-[90%] md:w-[52%] ">
             <TestiCard name={name} job={job} text={text} profileImg={profileImg} />
           </div>
         ))}

@@ -19,8 +19,8 @@ useEffect(() => {
 }, []);
 
   return (
-    <section className="px-[60px] py-[4em] ">
-        <div className="grid grid-cols-3 gap-4 ">
+    <section className="md:px-[60px] md:py-[4em] p-[16px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
             {news?.map(({title, team_member, publishDate, documentId}, index)=>(
                 <div key={index}>
                     <NewsCard title={title} teamMember={team_member} id={documentId} publishDate={publishDate} />
