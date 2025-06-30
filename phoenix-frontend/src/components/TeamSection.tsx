@@ -3,20 +3,22 @@ import { fetchTeamMembers, fetchAmbasadors } from '../api/strapi';
 import { useEffect, useState } from 'react';
 import { type Employee } from '../types/types';
 import TeamCard from './TeamCard';
+import { useParams } from 'react-router-dom';
 
 const TeamSection = () => {
   const { t } = useTranslation();
   const [teamMembers, setTeamMembers] = useState<Employee[] | null>(null);
   const [ambasadors, setAmbasadors] = useState<Employee[] | null>(null);
+  const {lng} = useParams()
 
   useEffect(() => {
-    fetchTeamMembers()
+    fetchTeamMembers(lng)
       .then(setTeamMembers)
       .catch(console.error);
-    fetchAmbasadors()
+    fetchAmbasadors(lng)
       .then(setAmbasadors)
       .catch(console.error);
-  }, []);
+  }, [lng]);
 
   return (
     <section className="md:py-[4em] px-[16px] md:px-[60px] ">

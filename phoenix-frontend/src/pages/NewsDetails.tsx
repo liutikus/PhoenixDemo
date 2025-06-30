@@ -12,12 +12,13 @@ const NewsDetails = () => {
 
     const {id} = useParams();
     const [newsDetails,setNewsDetails] = useState<News | null>(null)
+    const {lng} = useParams();
 
     useEffect(()=>{
-        fetchNewsById(id)
+        fetchNewsById(id, lng)
             .then(setNewsDetails)
             .catch(console.error)
-    },[])
+    },[lng])
 
   return (
     <div>

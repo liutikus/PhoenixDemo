@@ -2,13 +2,15 @@ import { useEffect, useState } from "react"
 import { fetchNews } from "../api/strapi";
 import type { News } from "../types/types";
 import NewsCard from "./NewsCard";
+import { useParams } from "react-router-dom";
 
 const NewsSection = () => {
 
     const [news,setNews] = useState<News[] | null>(null);
+    const {lng} = useParams();
 
 useEffect(() => {
-  fetchNews()
+  fetchNews(lng)
     .then((data) => {
       const sortedNews = [...data].sort((a, b) => {
         return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
@@ -16,7 +18,7 @@ useEffect(() => {
       setNews(sortedNews);
     })
     .catch(console.error);
-}, []);
+}, [lng]);
 
   return (
     <section className="md:px-[60px] md:py-[4em] p-[16px]">

@@ -14,15 +14,15 @@ const ProjectDetails = () => {
 
     const {id} = useParams();
     const [projectDetails, setProjectDetails] = useState<Project | null>(null);
+    const {lng} = useParams();
 
     useEffect(()=>{
-        fetchProjectById(id)
+        fetchProjectById(id, lng)
             .then(setProjectDetails)
             .catch(console.error)
 
-    },[])
+    },[lng])
 
-    console.log(projectDetails)
 
   return (
     <div>

@@ -8,7 +8,7 @@ const TeamCard = ({ Image, Role, Name, id }: Employee) => {
 
             <div
                 className="absolute bg-top inset-0 bg-cover z-0 rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-110"
-                style={{ backgroundImage: `url(${BaseURL + Image.url})` }}
+                style={{ backgroundImage: `url(${BaseURL + Image?.url})` }}
             />
             
             <div className="z-10 absolute rounded-2xl inset-0 bg-gradient-to-t from-[var(--color-theme)] from-[0%] to-transparent to-95%" />

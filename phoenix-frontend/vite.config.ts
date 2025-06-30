@@ -15,5 +15,8 @@ svgr({
       fill: 'currentColor',
     },
   },
-})],
+}), 
+], server: {
+    allowedHosts: ['de7b-89-149-120-95.ngrok-free.app'],
+  },
 })

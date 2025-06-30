@@ -16,6 +16,7 @@ const Projects = () => {
     const {projectStatus} = useParams();
     const {t} = useTranslation();
     const [projects, setProjects] = useState<Project[] | null>(null)
+    const {lng} = useParams();
 
     const HeroSection = ()=>{
    if(projectStatus === "active"){
@@ -48,11 +49,11 @@ const CheckProjectsStatus = () => {
 
     
     useEffect(()=>{
-      fetchProjects()
+      fetchProjects(lng)
         .then(setProjects)
         .then(()=>CheckProjectsStatus())
         .catch(console.error)
-    },[projectStatus])
+    },[projectStatus, lng])
 
   return (
     <div>

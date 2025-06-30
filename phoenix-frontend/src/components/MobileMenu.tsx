@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react"
 import LogoColor from "../assets/icons/logo-color.svg?react"
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 
@@ -16,6 +16,7 @@ const MobileMenu = ({children, navItems} :MobileMenuProps) => {
     
     const {t} = useTranslation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const {lng} = useParams();
 
     useEffect(() => {
   if (isMobileMenuOpen) {
@@ -31,9 +32,12 @@ const MobileMenu = ({children, navItems} :MobileMenuProps) => {
   return (
     <div className="">
     <div className="flex justify-between items-center bg-white p-4">
-        <div className="w-[150px] aspect-[2/1]">
+      <Link to={`/${lng}/`} className="cursor-pointer">
+        <div 
+        className="w-[150px] aspect-[2/1]">
             <LogoColor className="w-full h-full"/>
         </div>
+      </Link>
         <div className="flex justify-between items-center">
             <div>
 
