@@ -11,7 +11,10 @@ const HeroSection = () => {
  <section>
   <div className="relative w-full pb-[130px] h-auto md:h-screen overflow-visible px-[16px] md:px-[60px] ">
     <video
-      muted
+        autoPlay
+    muted
+    loop
+    playsInline
       className="absolute top-0 left-0 w-full h-full object-cover"
     >
       <source src="/videos/cover-video.mp4" type="video/mp4" />

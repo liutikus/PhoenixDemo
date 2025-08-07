@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import type { Sponsor } from "../types/types";
 import { useEffect, useState } from "react";
 import { BaseURL, fetchSponsors } from "../api/strapi";

@@ -4,7 +4,7 @@ import { BaseURL } from "../api/strapi"
 const TeamCard = ({ Image, Role, Name, id }: Employee) => {
 
     return (
-        <div className=" h-[300px] w-[300px] overflow-hidden bg-white rounded-2xl shadow-md relative top-0 left-0 group">
+        <div key={id} className=" h-[300px] w-[300px] overflow-hidden bg-white rounded-2xl shadow-md relative top-0 left-0 group">
 
             <div
                 className="absolute bg-top inset-0 bg-cover z-0 rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-110"
